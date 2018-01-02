@@ -1,0 +1,118 @@
+.nav {
+	background-color: #616161;
+}
+
+.dropdown {
+	position: relative;
+	float: right;
+}
+
+.nav-link {
+	color: white;
+}
+
+a:hover {
+	color: #dfdfdf;
+}
+
+.thumb {
+	position: relative;
+	float: right;
+	width: 30px;
+	height: auto;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.main-body h1 {
+	font-family: 'Lucida Console';
+	font-size: 5rem;
+}
+
+.main-body {
+	padding-top: 15em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+	background-color: #82E36D;
+}
+
+.main-body h1 {
+	color: #4F4F4F
+}
+
+.sub-content {
+	padding-left: .5em;
+}
+
+.sub-content p {
+	font-style: oblique;
+	color: #808080;
+}
+
+.sub-content h5 {
+	color: #4F4F4F;
+}
+
+
+
+
+
+
+
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 30px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
