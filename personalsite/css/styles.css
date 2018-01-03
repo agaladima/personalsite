@@ -1,3 +1,7 @@
+body {
+  font-family: 'Encode Sans Expanded', sans-serif;
+}
+
 .nav {
 	background-color: #616161;
 }
@@ -25,7 +29,7 @@ a:hover {
 }
 
 .main-body h1 {
-	font-family: 'Lucida Console';
+	font-family: 'Courier New';
 	font-size: 5rem;
 }
 
@@ -41,22 +45,38 @@ a:hover {
 	color: #4F4F4F
 }
 
-.sub-content {
+.sub-main-content {
 	padding-left: .5em;
 }
 
-.sub-content p {
+.sub-main-content p {
 	font-style: oblique;
-	color: #808080;
+	color: blue;
 }
 
-.sub-content h5 {
+.sub-main-content h5 {
 	color: #4F4F4F;
 }
 
+.sub-content {
+  padding-top: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
 
+.sub-content h2 {
+  margin: 0;
+  padding: 0;
+}
 
+.bitmoji img {
+  position: relative;
+  float: left;
+  display: block;
+  height: 4em;
 
+}
 
 
 
