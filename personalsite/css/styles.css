@@ -24,37 +24,48 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
-.main-body h1 {
-	font-family: 'Lucida Console';
-	font-size: 5rem;
-}
-
 .main-body {
+	
+}
+
+.main-sub-content {
 	padding-top: 15em;
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-bottom: 2em;
-	background-color: #82E36D;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  background-color: #82E36D;
 }
 
-.main-body h1 {
-	color: #4F4F4F
+.main-sub-content h1 {
+  font-family: 'Lucida Console';
+  font-size: 5rem;
+  color: #4F4F4F;
 }
 
-.sub-content {
-	padding-left: .5em;
-}
-
-.sub-content p {
+.main-sub-content p {
 	font-style: oblique;
 	color: #808080;
 }
 
-.sub-content h5 {
+.main-sub-content h5 {
 	color: #4F4F4F;
 }
 
+.sub-content {
+  padding-left: 2.5em;
+}
 
+.sub-content h3 {
+  padding-top: 2em;
+  color: tomato;
+}
+
+.sub-content img {
+  float: left;
+  height: 8em;
+
+  background-repeat: no-repeat;
+}
 
 
 
