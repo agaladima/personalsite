@@ -3,100 +3,64 @@ body {
 }
 
 .nav {
-	background-color: #616161;
+  background-color: #2C2C2C;
 }
 
 .dropdown {
-	position: relative;
-	float: right;
+  position: relative;
+  float: right;
 }
 
 .nav-link {
-	color: white;
+  color: white;
 }
 
 a:hover {
-	color: #dfdfdf;
+  color: #dfdfdf;
 }
 
 .thumb {
-	position: relative;
-	float: right;
-	width: 30px;
-	height: auto;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
+  position: relative;
+  float: right;
+  width: 30px;
+  height: auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
 .main-body h1 {
-	font-family: 'Courier New';
-	font-size: 5rem;
-}
-
-=======
->>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
-.main-body {
-	
+  font-family: 'Encode Sans Expanded';
+  font-size: 5rem;
 }
 
 .main-sub-content {
-	padding-top: 15em;
+  padding-top: 15em;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 15em;
-  background-color: #82E36D;
+  background-color: #FFF0E6;
 }
 
-<<<<<<< HEAD
-.sub-main-content {
-	padding-left: .5em;
-}
-
-.sub-main-content p {
-=======
 .main-sub-content h1 {
-  font-family: 'Lucida Console';
+  font-family: 'Encode Sans Expanded';
   font-size: 5rem;
   color: #4F4F4F;
 }
 
 .main-sub-content p {
->>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
-	font-style: oblique;
-	color: blue;
+  font-style: oblique;
+  color: blue;
 }
 
-<<<<<<< HEAD
-.sub-main-content h5 {
-=======
 .main-sub-content h5 {
->>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
-	color: #4F4F4F;
+  color: #4F4F4F;
 }
 
 .sub-content {
-<<<<<<< HEAD
   padding-top: 3em;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
-}
-
-.sub-content h2 {
-  margin: 0;
-  padding: 0;
-}
-
-.bitmoji img {
-  position: relative;
-  float: left;
-  display: block;
-  height: 4em;
-
-=======
-  padding: 5em;
-  padding-top: 2.5em;
 }
 
 #sub-cont-title {
@@ -117,7 +81,7 @@ a:hover {
   border-width: thin;
   border-style: solid;
   border-color: tomato;
-  margin-left: 20%;
+  margin-left: 30%;
   margin-right: auto;
   margin-bottom: 30px;
   padding: 10px;
@@ -134,7 +98,6 @@ a:hover {
   color: gray;
   margin-top: 0;
   margin-bottom: 0;
->>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
 }
 
 .role {
@@ -142,6 +105,8 @@ a:hover {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+
 
 
 
