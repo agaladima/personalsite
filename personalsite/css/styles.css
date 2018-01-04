@@ -28,37 +28,55 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
+<<<<<<< HEAD
 .main-body h1 {
 	font-family: 'Courier New';
 	font-size: 5rem;
 }
 
+=======
+>>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
 .main-body {
+	
+}
+
+.main-sub-content {
 	padding-top: 15em;
-	padding-left: 2em;
-	padding-right: 2em;
-	padding-bottom: 2em;
-	background-color: #82E36D;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 15em;
+  background-color: #82E36D;
 }
 
-.main-body h1 {
-	color: #4F4F4F
-}
-
+<<<<<<< HEAD
 .sub-main-content {
 	padding-left: .5em;
 }
 
 .sub-main-content p {
+=======
+.main-sub-content h1 {
+  font-family: 'Lucida Console';
+  font-size: 5rem;
+  color: #4F4F4F;
+}
+
+.main-sub-content p {
+>>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
 	font-style: oblique;
 	color: blue;
 }
 
+<<<<<<< HEAD
 .sub-main-content h5 {
+=======
+.main-sub-content h5 {
+>>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
 	color: #4F4F4F;
 }
 
 .sub-content {
+<<<<<<< HEAD
   padding-top: 3em;
   padding-left: 2em;
   padding-right: 2em;
@@ -76,8 +94,54 @@ a:hover {
   display: block;
   height: 4em;
 
+=======
+  padding: 5em;
+  padding-top: 2.5em;
 }
 
+#sub-cont-title {
+  color: tomato;
+  font-size: 3em;
+}
+
+.cont img {
+  height: 10em;
+  background-repeat: no-repeat;
+}
+
+.cont {
+  float: left;
+}
+
+.box {
+  border-width: thin;
+  border-style: solid;
+  border-color: tomato;
+  margin-left: 20%;
+  margin-right: auto;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.company {
+  color: tomato;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.dates-worked {
+  color: gray;
+  margin-top: 0;
+  margin-bottom: 0;
+>>>>>>> 3aeb58a8b285862c6f3d94cf00e0557483e5758b
+}
+
+.role {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 
 
