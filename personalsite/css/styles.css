@@ -3,12 +3,23 @@ body {
 }
 
 .nav {
-  background-color: #2C2C2C;
-}
+  background-color: #4F4F4F;
+  position: fixed;
+  width: 100%;
+ }
+
+.nav-item {
+  margin: auto;
+  font-size: 14px;
+ }
 
 .dropdown {
   position: relative;
   float: right;
+}
+
+.dropdown a {
+  font-size: 14px;
 }
 
 .nav-link {
@@ -17,6 +28,15 @@ body {
 
 a:hover {
   color: #dfdfdf;
+}
+
+.nav-thumb {
+  position: relative;
+  width: 35px;
+  height: auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-filter: brightness(200%); 
 }
 
 .thumb {
@@ -49,7 +69,7 @@ a:hover {
 
 .main-sub-content p {
   font-style: oblique;
-  color: blue;
+  color: #808080;
 }
 
 .main-sub-content h5 {
@@ -106,6 +126,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+
+.nba {
+  background-color: tomato;
+}
 
 
 
