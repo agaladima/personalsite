@@ -105,8 +105,6 @@ a:hover {
   padding-left: .5em;
 }
 
-
-
 .thumb-resume {
   position: relative;
   float: right;
@@ -123,6 +121,7 @@ a:hover {
 
 .cont {
   float: left;
+  width: 25%;
 }
 
 .box {
@@ -158,6 +157,10 @@ a:hover {
 .nba {
   background-color: tomato;
 }
+
+
+
+
 
 
 
