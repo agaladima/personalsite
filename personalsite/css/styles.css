@@ -3,7 +3,7 @@ body {
 }
 
 .nav {
-  background-color: #4F4F4F;
+  background-color: #3c3c3c;
   position: fixed;
   width: 100%;
  }
@@ -39,6 +39,12 @@ a:hover {
   -webkit-filter: brightness(200%); 
 }
 
+.fullsize-img {
+  display: block;
+  margin: auto;
+  width: 15%;
+}
+
 .thumb {
   position: relative;
   float: right;
@@ -65,15 +71,18 @@ a:hover {
   font-family: 'Encode Sans Expanded';
   font-size: 5rem;
   color: #4F4F4F;
+  text-align: center;
 }
 
 .main-sub-content p {
   font-style: oblique;
   color: #808080;
+  text-align: center;
 }
 
 .main-sub-content h5 {
   color: #4F4F4F;
+  text-align: center;
 }
 
 .sub-content {
@@ -86,6 +95,25 @@ a:hover {
 #sub-cont-title {
   color: tomato;
   font-size: 3em;
+}
+
+.resume {
+  float: right;
+}
+
+.resume-download {
+  padding-left: .5em;
+}
+
+
+
+.thumb-resume {
+  position: relative;
+  float: right;
+  width: 20px;
+  height: auto;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .cont img {
