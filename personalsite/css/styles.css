@@ -13,7 +13,7 @@ body {
   font-size: 14px;
  }
 
-.dropdown {
+.nav-item {
   position: relative;
   float: right;
 }
@@ -93,6 +93,9 @@ a:hover {
   padding-left: 5em;
   padding-right: 5em;
   padding-bottom: 2em;
+  background-color: #F7F7F7;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 #sub-cont-title {
@@ -102,6 +105,7 @@ a:hover {
 
 .resume {
   float: right;
+  margin-top: 1em;
 }
 
 .resume-download {
@@ -161,12 +165,26 @@ a:hover {
   margin-bottom: 0;
 }
 
-
-.nba {
-  background-color: tomato;
+.both-forms {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+  padding: 0 1em;
 }
 
-.nba h2 {
+.nba-box {
+  width: 49.5%;
+  background-image: url('https://coursesearch.uchicago.edu/cs/prdguest/cache/UC_SEARCH_ICON_170616.PNG');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nbax {
+  background-color: #F7F7F7;
+  text-align: center;
+}
+
+.nbax h2 {
   text-align: center;
   font-weight: bold;
   padding-top: 1em;
@@ -176,18 +194,35 @@ a:hover {
   font-weight: bold;
   font-size: 1.5em; 
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1.5em 0 0 0;
 }
 
 .form {
   margin: auto;
-  width: 15%;
+  width: 50%;
+  
+  padding-bottom: 1em;
 }
 
 form input {
-  margin: .5em 0;
+  margin: 1em;
 }
 
+label {
+  font-weight: bold;
+  padding: 1em 0 0 0;
+}
+
+.contact-form {
+  text-align: center;
+  background-color: #F7F7F7;
+  margin: 1em;
+  padding: 2em;
+}
+
+.input-border {
+  list-style-type: none;
+}
 
 
 

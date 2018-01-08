@@ -21,7 +21,7 @@
 				<a class="nav-link" href="#exp">Experience</a>
 		  </li>
 		  <li class="nav-item">
-				<a class="nav-link" href="#nba">NBA Search</a>
+				<a class="nav-link" href="#nba">NBA Player Search</a>
 		  </li>
 	  	<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Social</a>
@@ -54,14 +54,14 @@
 		    </div>
 		  </li>
 		  <li class="nav-item">
-				<a class="nav-link" href="#">Contact</a>
+				<a class="nav-link" href="#contact">Contact</a>
 		  </li>
 		</ul>
 		<div class="main-body">
 			<div class="main-sub-content">
-				<h1>FULL STACK DEVELOPER<span class="blinking-cursor">_</span></h1>
+				<h1>FULL  STACK  DEVELOPER<span class="blinking-cursor">_</span></h1>
 				<img class="fullsize-img" src="images/pageopener.png" alt="Arum Bitmoji">
-				<p>I just want to build cool things with smart people</p>
+				<p>I just want to build cool things with smart people . . . but sometimes I'd like a nap</p>
 				<h5>Specializing in building concise web apps from the ground up, from back to front</h5>
 			</div>
 		</div>
@@ -116,14 +116,14 @@
 						<p class="role">Data Integrity Analyst</p>
 					</div>
 					<div class="box">
-						<h2 class="company">School Dudes Rapid Food</h2>
-						<p class="dates-worked">January 2013 - June 2013</p>
-						<p class="role">Cofounder</p>
-					</div>
-					<div class="box">
 						<h2 class="company">Blackford Capital</h2>
 						<p class="dates-worked">January 2013 - May 2013</p>
 						<p class="role">Investment Analyst</p>
+					</div>
+					<div class="box">
+						<h2 class="company">School Dudes Rapid Food</h2>
+						<p class="dates-worked">November 2012 - June 2013</p>
+						<p class="role">Cofounder</p>
 					</div>
 					<div class="box">
 						<h2 class="company">Calvin College - Student Bike Program</h2>
@@ -138,16 +138,47 @@
 				</div>
 			</div>
 		</div>
-		<div class="nba" id="nba">
-			<h2>NBA Search</h2>
-			<p class="description-nba">Pull any current NBA player's stat when you search for their name below.</p><br>
-			<form class="form" action="submit">
-				<p class="player-name">Enter Player Name</p>
-				<span>
-					<input type="text" name="firstname" placeholder="First Name">
-					<input type="text" name="firstname" placeholder="Last Name">
-					<input type="submit" value="Submit">
-				</span>
+		<div class="both-forms">
+			<div class="nba-box nbax" id="nba">
+				<h2>NBA Search</h2>
+				<p class="description-nba">Pull any current NBA player's stats when you search for their name below.</p><br>
+				<form class="form" action="submit">
+					<span>
+						<input type="text" name="firstname" placeholder="First Name">
+						<input type="text" name="firstname" placeholder="Last Name"><br>
+						<input type="submit" value="Submit">
+					</span>
+				</form>
+			</div>
+			<div class="nba-box nbax">
+				<h2>NBA Search</h2>
+				<p class="description-nba">Pull any current NBA player's stats when you search for their name below.</p><br>
+				<form class="form" action="submit">
+					<span>
+						<input type="text" name="firstname" placeholder="First Name">
+						<input type="text" name="firstname" placeholder="Last Name"><br>
+						<input type="submit" value="Submit">
+					</span>
+				</form>
+			</div>
+		</div>
+		<div class="contact-form" id="contact">
+			<h2>Contact Me</h2>
+			<p>Please use the form below to let me know why you're contacting me. I promise I'll respond</p>
+			<form name="contact-reason" action="">
+				<ul class="input-border">
+					<li class="dropdown">
+						<label for="contact-type">I'm Contacting About:</label><br>
+						<select name="contact-type" id="contact-type" >
+							<option value>Select Contact Category:</option>
+							<option value="General">General Inqueries</option>
+							<option value="JobOp">Job Opportunity</option>
+							<option value="Networking">Networking</option>
+							<option value="Podcast">KB Podcast</option>
+							<option value="Other">Other</option>
+						</select>
+					</li>
+				</ul>
 			</form>
 		</div>
 	</div>
