@@ -22,6 +22,10 @@ body {
   font-size: 14px;
 }
 
+.hiding{
+  color: tomato;
+}
+
 .nav-link {
   color: white;
 }
@@ -46,7 +50,6 @@ a:hover {
 }
 
 .thumb {
-  position: relative;
   float: right;
   width: 30px;
   height: auto;
@@ -105,6 +108,11 @@ a:hover {
   padding-left: .5em;
 }
 
+.cert-date {
+  font-size: .75em;
+  color: gray;
+}
+
 .thumb-resume {
   position: relative;
   float: right;
@@ -158,6 +166,27 @@ a:hover {
   background-color: tomato;
 }
 
+.nba h2 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+.description-nba {
+  font-weight: bold;
+  font-size: 1.5em; 
+  text-align: center;
+  padding: 1.5em 0;
+}
+
+.form {
+  margin: auto;
+  width: 15%;
+}
+
+form input {
+  margin: .5em 0;
+}
 
 
 

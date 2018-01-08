@@ -21,19 +21,34 @@
 				<a class="nav-link" href="#exp">Experience</a>
 		  </li>
 		  <li class="nav-item">
-				<a class="nav-link" href="#">Blog</a>
+				<a class="nav-link" href="#nba">NBA Search</a>
 		  </li>
 	  	<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Social</a>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="https://www.facebook.com/arum.galadima" target="_blank">Facebook<img class="thumb" src="images/facebook.png" alt="Facebook Logo"></a>
-				<a class="dropdown-item" href="https://twitter.com/GSMbyAIR" target="_blank">Twitter<img class="thumb" src="images/twitter.png" alt="Twitter Logo"></a>
+				<a class="dropdown-item showing" href="https://www.facebook.com/arum.galadima" target="_blank">Facebook<img class="thumb" src="images/facebook.png" alt="Facebook Logo"></a>
+				<a class="dropdown-item hiding" href="https://www.facebook.com/arum.galadima" target="_blank">Arum Galadima</a>
+
+
+				<a class="dropdown-item showing" href="https://twitter.com/GSMbyAIR" target="_blank">Twitter<img class="thumb" src="images/twitter.png" alt="Twitter Logo"></a>
+				<a class="dropdown-item hiding" href="https://twitter.com/GSMbyAIR" target="_blank">@GSMbyAIR</a>
+
 				<!-- when clicked my userhandle is displayed for IG and SnapChat and add logo to side of the dropdown item-->
-				<a class="dropdown-item" href="#">Instagram<img class="thumb" src="images/instagram.png" alt="Instagram Logo"></a>
-				<a class="dropdown-item" href="#">Snapchat<img class="thumb" src="images/snapchat.png" alt="Snapchat Logo"></a>
-				<a class="dropdown-item" href="https://www.linkedin.com/in/arum-jugu-galadima-97a70428" target="_blank">LinkedIn<img class="thumb" src="images/linkedin.png" alt="LinkedIn Logo"></a>
-				<a class="dropdown-item" href="https://github.com/agaladima" target="_blank">GitHub<img class="thumb" src="images/github.png" alt="Github Logo"></a>
-				<a class="dropdown-item" href="https://soundcloud.com/dj-ximer-1/tracks" target="_blank">SoundCloud<img class="thumb" src="images/soundcloud.png" alt="SoundCloud Logo"></a>
+				<a class="dropdown-item showing" href="#">Instagram<img class="thumb" src="images/instagram.png" alt="Instagram Logo"></a>
+				<a class="dropdown-item hiding" href="#">@alhajimallamu</a>
+
+				<a class="dropdown-item showing" href="#">Snapchat<img class="thumb" src="images/snapchat.png" alt="Snapchat Logo"></a>
+				<a class="dropdown-item hiding" href="#">@yah-row</a>
+
+				<a class="dropdown-item showing" href="https://www.linkedin.com/in/arum-jugu-galadima-97a70428" target="_blank">LinkedIn<img class="thumb" src="images/linkedin.png" alt="LinkedIn Logo"></a>
+				<a class="dropdown-item hiding" href="https://www.linkedin.com/in/arum-jugu-galadima-97a70428" target="_blank">Arum Galadima</a>
+
+				<a class="dropdown-item showing" href="https://github.com/agaladima" target="_blank">GitHub<img class="thumb" src="images/github.png" alt="Github Logo"></a>
+				<a class="dropdown-item hiding" href="https://github.com/agaladima" target="_blank">@agaladima</a>
+
+				<a class="dropdown-item showing" href="https://soundcloud.com/dj-ximer-1/tracks" target="_blank">SoundCloud<img class="thumb" src="images/soundcloud.png" alt="SoundCloud Logo"></a>
+				<a class="dropdown-item hiding" href="https://soundcloud.com/dj-ximer-1/tracks" target="_blank">@yah'row</a>
+
 				<div class="dropdown-divider"></div>
 				<a class="dropdown-item" href="http://arumgaladima.wixsite.com/knowledgebandits" target="_blank">Knowledge Bandits</a>
 		    </div>
@@ -47,7 +62,7 @@
 				<h1>FULL STACK DEVELOPER<span class="blinking-cursor">_</span></h1>
 				<img class="fullsize-img" src="images/pageopener.png" alt="Arum Bitmoji">
 				<p>I just want to build cool things with smart people</p>
-				<h5>Specializing in building concise web apps from the ground up, from back to front!</h5>
+				<h5>Specializing in building concise web apps from the ground up, from back to front</h5>
 			</div>
 		</div>
 		<div class="sub-content" id="exp">
@@ -65,9 +80,9 @@
 				<hr>
 				<h3>Certifications</h3>
 				<h6><a href="https://www.coursera.org/account/accomplishments/specialization/EUCAZF7MRNWV" target="_blank">Java Programming and Software Engineering Fundamentals</a></h6>
-				<p>July 2016 - December 2016</p>
+				<p class="cert-date">July 2016 - December 2016</p>
 				<h6><a href="">Full Stack JavaScript</a></h6>
-				<p>June 2017 - March 2018</p>
+				<p class="cert-date">June 2017 - March 2018</p>
 				<br>
 				<hr>
 				<h3>Languages/Technologies</h3>
@@ -123,8 +138,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="nba">
-			<h2>Hey this is cool. Enter an NBA player's name and pull up their stats!</h2>
+		<div class="nba" id="nba">
+			<h2>NBA Search</h2>
+			<p class="description-nba">Pull any current NBA player's stat when you search for their name below.</p><br>
+			<form class="form" action="submit">
+				<p class="player-name">Enter Player Name</p>
+				<span>
+					<input type="text" name="firstname" placeholder="First Name">
+					<input type="text" name="firstname" placeholder="Last Name">
+					<input type="submit" value="Submit">
+				</span>
+			</form>
 		</div>
 	</div>
 
