@@ -133,18 +133,24 @@ a:hover {
 
 .cont {
   float: left;
-  width: 25%;
+  width: 20%;
 }
 
 .box {
   border-width: thin;
   border-style: solid;
   border-color: tomato;
-  margin-left: 30%;
+  margin-left: 5%;
   margin-right: auto;
   margin-bottom: 30px;
   padding: 10px;
   border-radius: 20px;
+  background-color: white;
+}
+
+.experience-item {
+    border-left: 1.5px solid rgba(0,0,0,.1);
+    margin-left: 24%;
 }
 
 .company {
@@ -177,11 +183,15 @@ a:hover {
   background-image: url('https://coursesearch.uchicago.edu/cs/prdguest/cache/UC_SEARCH_ICON_170616.PNG');
   background-position: center;
   background-repeat: no-repeat;
+  text-align: center;
+  background-color: #F7F7F7;
 }
 
 .nbax {
-  background-color: #F7F7F7;
+  width: 49.5%;
+  background-color: #24292e;
   text-align: center;
+  color: white;
 }
 
 .nbax h2 {
@@ -200,12 +210,12 @@ a:hover {
 .form {
   margin: auto;
   width: 50%;
-  
   padding-bottom: 1em;
 }
 
-form input {
-  margin: 1em;
+.btn {
+  text-align: center;
+  margin: .5em;
 }
 
 label {
