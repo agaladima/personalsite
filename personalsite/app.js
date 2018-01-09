@@ -17,6 +17,7 @@ console.log(curry.firstName);
 // html += '</div>';
 // $('.nba').append('<div>Hello</div>');
 
+//when the search button on index.html is pressed, it should send the data to the app.js file 
 
 app.get('/', function (req, res) {
   res.send('Hello World')

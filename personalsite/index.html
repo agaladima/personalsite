@@ -54,7 +54,7 @@
 		    </div>
 		  </li>
 		  <li class="nav-item">
-				<a class="nav-link" href="#contact">Contact</a>
+				<a class="nav-link" href="#contact-form">Contact</a>
 		  </li>
 		</ul>
 		<div class="main-body">
@@ -78,14 +78,14 @@
 				<br>
 				<br>
 				<hr>
-				<h3>Certifications</h3>
+				<h4>Certifications</h4>
 				<h6><a href="https://www.coursera.org/account/accomplishments/specialization/EUCAZF7MRNWV" target="_blank">Java Programming and Software Engineering Fundamentals</a></h6>
 				<p class="cert-date">July 2016 - December 2016</p>
 				<h6><a href="">Full Stack JavaScript</a></h6>
 				<p class="cert-date">June 2017 - March 2018</p>
 				<br>
 				<hr>
-				<h3>Languages/Technologies</h3>
+				<h4>Languages/Technologies</h4>
 				<p>Java, JavaScript, HTML, CSS, SASS, Bootstrap, jQuery, JSON, AJAX, Node.js, React.js, Angular.js, JSP, Gulp.js, npm, APIs, Git, GitHub, HTTP</p>
 			</div>
 
@@ -163,23 +163,51 @@
 				</form>
 			</div>
 		</div>
-		<div class="contact-form" id="contact">
-			<h2>Contact Me</h2>
-			<p>Please use the form below to let me know why you're contacting me. I promise I'll respond</p>
-			<form name="contact-reason" action="">
-				<ul class="input-border">
-					<li class="dropdown">
-						<label for="contact-type">I'm Contacting About:</label><br>
-						<select name="contact-type" id="contact-type" >
-							<option value>Select Contact Category:</option>
-							<option value="General">General Inqueries</option>
-							<option value="JobOp">Job Opportunity</option>
-							<option value="Networking">Networking</option>
-							<option value="Podcast">KB Podcast</option>
-							<option value="Other">Other</option>
-						</select>
-					</li>
-				</ul>
+		<div class="contact-form" id="contact-form">
+			<h2 class="center">Contact Me</h2>
+			<p class="center">Please use the form below to let me know why you're contacting me. I promise I'll respond</p>
+			<form name="contact-reason" action="/" method="post">
+				<div class="center">
+					<ul class="input-border">
+						<li class="dropdown">
+							<label for="contact-type">I'm Contacting About:</label><br>
+							<select name="contact-type" id="contact-type" >
+								<option value>Select Contact Category:</option>
+								<option value="General">General Inqueries</option>
+								<option value="JobOp">Job Opportunity</option>
+								<option value="Networking">Networking</option>
+								<option value="Podcast">KB Podcast</option>
+								<option value="Other">Other</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<div class="form-body">
+					<label for="fname">First Name</label>
+					<br>
+			    <input type="text" id="fname" name="firstname" placeholder="Your first name...">
+					<br>
+			    <label for="lname">Last Name</label>
+			    <br>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+					<br>
+			    <label for="location">Location</label>
+			    <br>
+			    <input type="text" id="location" name="location" placeholder="Your location...">
+			    <label for="email">Email</label>
+			    <br>
+			    <input type="email" id="mail" name="user-email" placeholder="Your email...">
+					<br>
+					<label for="subject">Subject</label>
+					<br>
+			    <input type="text" id="subject" name="subject" value="">
+					<br>
+			    <label for="subject">Message</label>
+			    <br>
+			    <textarea id="message" name="message" placeholder="Write something.."></textarea>
+					<br>
+			    <input class="form-btn" type="submit" value="Submit">
+				</div>
 			</form>
 		</div>
 	</div>
