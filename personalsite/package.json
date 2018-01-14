@@ -9,9 +9,11 @@
   "author": "Arum Galadima",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.2",
     "nba": "^4.1.0",
+    "pug": "^2.0.0-rc.4",
     "scrape-it": "^4.1.2"
   },
   "devDependencies": {
