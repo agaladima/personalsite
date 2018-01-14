@@ -33,4 +33,6 @@ app.get('/', function (req, res) {
   res.send('Hello World?')
 })
  
-app.listen(3000)
+app.listen(3000, () => {
+	console.log('The app is running on local host:3000.')
+});
