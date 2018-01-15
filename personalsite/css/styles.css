@@ -213,9 +213,10 @@ a:hover {
   padding-bottom: 1em;
 }
 
-.btn {
+.btn-srch {
   text-align: center;
   margin: .5em;
+  border-radius: 5px;
 }
 
 label {

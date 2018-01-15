@@ -64,3 +64,19 @@ $('#contact-type').change(function() {
 });
 
 
+$('.stats').hide();
+$('.btn-srch').click(function () {
+	if($('.srch-name').val() === '') {
+		$('.srch-name').css('border-color', 'tomato');
+	} else if ($('.srch-name').val() !== '' ) {
+		$('.forma').hide();
+		$('.stats').show();
+	} 
+});
+
+$('.srch').click(function () {
+	$('.srch-name').css('border-color', '');
+	$('.forma').show();
+	$('.srch-name').val('');
+	$('.stats').hide();
+});
