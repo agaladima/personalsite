@@ -187,6 +187,22 @@ a:hover {
   background-color: #F7F7F7;
 }
 
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
 .nbax {
   width: 49.5%;
   background-color: #24292e;

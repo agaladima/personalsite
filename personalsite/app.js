@@ -13,26 +13,37 @@ app.set('view engine', 'pug');
 //use css
 app.use('/static', express.static('css'));
 
-let url = "http://www.nba.com/players/lebron/james/";
-
-//console.log(scrapeIt(url));
 
 const curry = NBA.findPlayer('russell westbrook');
-//NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
-console.log(curry.firstName);
-
-//append stuff to .nba class
-// let html = '<div ="nba-form">Player Name: ';
-// html += curry.firstName;
-// html += '</div>';
-// $('.nba').append('<div>Hello</div>');
+NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
+//console.log(curry.firstName);
 
 //when the search button on index.html is pressed, it should send the data to the app.js file 
+//render the data
+app.get('/', (req, res) => {
+	res.render('index', {
+		myTwit: myTwitter,
+		myFollowers: numFollowers,
+		profileImg: profileImage,
+		profileBnr: profileBanner,
+		'elFriends': friends,
+		'Tweets': timeline,
+		'elDMs': directmssg
+	});
+});
 
-app.get('/', function (req, res) {
-  res.send('Hello World?')
-})
- 
+
+//error pages
+app.use(function(req, res) {
+	res.status(400);
+	res.render('404.pug', {title: '404: File Not Found'});
+});
+
+app.use(function(error, req, res, next) {
+	res.status(500);
+	res.render('500.pug', {title:'500: Internal Server Error', error: error});
+});
+
 app.listen(3000, () => {
 	console.log('The app is running on local host:3000.')
 });
