@@ -1,4 +1,5 @@
 
+
 //change active class of nav item when different items are clicked
 $('ul li').click(function() {
 	$('a').removeClass('active');
@@ -66,6 +67,9 @@ $('#contact-type').change(function() {
 
 $('.stats').hide();
 $('.btn-srch').click(function () {
+	let firstName = $('.first').val();
+
+	console.log(firstName);
 	if($('.srch-name').val() === '') {
 		$('.srch-name').css('border-color', 'tomato');
 	} else if ($('.srch-name').val() !== '' ) {

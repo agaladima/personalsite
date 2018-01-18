@@ -13,23 +13,16 @@ app.set('view engine', 'pug');
 //use css
 app.use('/static', express.static('css'));
 
+//let playerName = 
 
-const curry = NBA.findPlayer('russell westbrook');
-NBA.stats.playerInfo({ PlayerID: curry.playerId }).then(console.log);
+const player = NBA.findPlayer('russell westbrook');
+NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
 //console.log(curry.firstName);
 
 //when the search button on index.html is pressed, it should send the data to the app.js file 
 //render the data
 app.get('/', (req, res) => {
-	res.render('index', {
-		myTwit: myTwitter,
-		myFollowers: numFollowers,
-		profileImg: profileImage,
-		profileBnr: profileBanner,
-		'elFriends': friends,
-		'Tweets': timeline,
-		'elDMs': directmssg
-	});
+	res.render('index');
 });
 
 
