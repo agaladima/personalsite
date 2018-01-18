@@ -1,0 +1,40 @@
+#nba.both-forms
+  .nba-box
+    h2.lower-bold NBA Search
+    p.description-nba.forma Pull any current NBA player's stats when you search for their name below.
+    br
+    .forma.form(action='submit')
+      span
+        input.srch-name.first(type='text', name='firstname', placeholder='First Name')
+        input.srch-name.last(type='text', name='lastname', placeholder='Last Name')
+        br
+        input.btn-srch(type='submit', value='Submit')
+    .stats
+      table.player-info
+        tr
+          th Name
+          th Birthdate
+          th Height
+          th Weight
+          th Jersey
+          th Position
+          th Team
+        td
+      table.player-stats
+        tr
+          th Points
+          th Assists
+          th Rebounds
+          th PIE
+        td
+      input.srch(type='submit', value='Search Again')
+  .nbax
+    h2.lower-bold NBA Search
+    p.description-nba Pull any current NBA player's stats when you search for their name below.
+    br
+    .formb.form(action='submit')
+      span
+        input(type='text', name='firstname', placeholder='First Name')
+        input(type='text', name='lastname', placeholder='Last Name')
+        br
+        input.btn-srch(type='submit', value='Submit')

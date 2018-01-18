@@ -84,3 +84,5 @@ $('.srch').click(function () {
 	$('.srch-name').val('');
 	$('.stats').hide();
 });
+
+console.log('Is it working?');

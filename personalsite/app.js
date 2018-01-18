@@ -38,5 +38,5 @@ app.use(function(error, req, res, next) {
 });
 
 app.listen(3000, () => {
-	console.log('The app is running on local host:3000.')
+	console.log('The app is running on local host:3000.');
 });
