@@ -68,8 +68,6 @@ $('#contact-type').change(function() {
 $('.stats').hide();
 $('.btn-srch').click(function () {
 	let firstName = $('.first').val();
-
-	console.log(firstName);
 	if($('.srch-name').val() === '') {
 		$('.srch-name').css('border-color', 'tomato');
 	} else if ($('.srch-name').val() !== '' ) {
@@ -84,5 +82,3 @@ $('.srch').click(function () {
 	$('.srch-name').val('');
 	$('.stats').hide();
 });
-
-console.log('Is it working?');

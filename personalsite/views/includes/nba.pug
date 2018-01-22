@@ -3,12 +3,12 @@
     h2.lower-bold NBA Search
     p.description-nba.forma Pull any current NBA player's stats when you search for their name below.
     br
-    .forma.form(action='submit')
+    form.forma.form(method='get' action='')
       span
         input.srch-name.first(type='text', name='firstname', placeholder='First Name')
         input.srch-name.last(type='text', name='lastname', placeholder='Last Name')
         br
-        input.btn-srch(type='submit', value='Submit')
+        input.btn-srch(type='submit' value='Search')
     .stats
       table.player-info
         tr
@@ -34,7 +34,7 @@
     br
     .formb.form(action='submit')
       span
-        input(type='text', name='firstname', placeholder='First Name')
-        input(type='text', name='lastname', placeholder='Last Name')
+        input(type='text', name='fname', placeholder='First Name')
+        input(type='text', name='lname', placeholder='Last Name')
         br
         input.btn-srch(type='submit', value='Submit')

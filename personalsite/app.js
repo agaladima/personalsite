@@ -3,8 +3,10 @@ const app = express();
 const bodyParser = require('body-parser');
 const scrapeIt = require('scrape-it');
 const NBA = require('nba');
+const multer = require('multer');
+const upload = multer();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //use pug
@@ -12,15 +14,23 @@ app.set('view engine', 'pug');
 
 //use css
 app.use('/static', express.static('css'));
+//let playerInfo = {};
+//parse body for info
+app.post('/', function (req, res) {
+	let first = req.query.firstname;
+	let last = req.query.lastname;
+	let fullname = first + 'dj ' + last;
+	// let player = NBA.findPlayer(fullname);
+	// playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId });
+	let player = NBA.findPlayer(req.query.firstname);
+	res.send(fullname);
+});
 
-//let playerName = 
+//let playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
 
-const player = NBA.findPlayer('russell westbrook');
-NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
-//console.log(curry.firstName);
 
 //when the search button on index.html is pressed, it should send the data to the app.js file 
-//render the data
+//render the page
 app.get('/', (req, res) => {
 	res.render('index');
 });
