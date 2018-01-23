@@ -5,6 +5,17 @@ const scrapeIt = require('scrape-it');
 const NBA = require('nba');
 const multer = require('multer');
 const upload = multer();
+//const routes = require('./routes');
+
+const Email = require('email-templates');
+const email = new Email({
+	message: {
+		from: 'arum.galadima@gmail.com'
+	},
+	transport: {
+		jsonTransport: true
+	}
+});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -14,24 +25,31 @@ app.set('view engine', 'pug');
 
 //use css
 app.use('/static', express.static('css'));
-//let playerInfo = {};
-//parse body for info
-app.post('/', function (req, res) {
-	let first = req.query.firstname;
-	let last = req.query.lastname;
-	let fullname = first + 'dj ' + last;
-	// let player = NBA.findPlayer(fullname);
-	// playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId });
-	let player = NBA.findPlayer(req.query.firstname);
-	res.send(fullname);
-});
 
-//let playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
+//app.use('/', routes);
+// let player = NBA.findPlayer(fullname);
+// playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId });
+
+
+
 
 
 //when the search button on index.html is pressed, it should send the data to the app.js file 
+
+//send email to myself with form data when the form is submitted
+
+
 //render the page
 app.get('/', (req, res) => {
+	//store player info in playerInfo object
+	let playerData = {};
+	//Grab player name that is searched
+	let first = req.query.firstname;
+	let last = req.query.lastname;
+	let fullname = first + ' ' + last;
+	let player = NBA.findPlayer(fullname);
+	playerData = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
+	//res.redirect('/');
 	res.render('index');
 });
 

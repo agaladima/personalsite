@@ -8,7 +8,7 @@
         input.srch-name.first(type='text', name='firstname', placeholder='First Name')
         input.srch-name.last(type='text', name='lastname', placeholder='Last Name')
         br
-        input.btn-srch(type='submit' value='Search')
+        button.btn-srch Search
     .stats
       table.player-info
         tr
@@ -27,14 +27,14 @@
           th Rebounds
           th PIE
         td
-      input.srch(type='submit', value='Search Again')
+      button.srch Search Again
   .nbax
     h2.lower-bold NBA Search
     p.description-nba Pull any current NBA player's stats when you search for their name below.
     br
-    .formb.form(action='submit')
+    .formb.form(action='')
       span
         input(type='text', name='fname', placeholder='First Name')
         input(type='text', name='lname', placeholder='Last Name')
         br
-        input.btn-srch(type='submit', value='Submit')
+        input.btn-srch

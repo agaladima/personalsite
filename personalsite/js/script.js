@@ -42,7 +42,7 @@ $('.form-btn').hover(function() {
 });
 
 $('.form-body').hide();
-//check if option is selected
+//check if an email option is selected
 $('#contact-type').change(function() {
 	if($(this).val() === 'General') {
 		$('#subject').val('Just Connecting');
@@ -64,21 +64,33 @@ $('#contact-type').change(function() {
 	}
 });
 
-
+//checking to see whether the search form is complete or not
+	//if it's complete then post the form
 $('.stats').hide();
-$('.btn-srch').click(function () {
+$('.btn-srch').click(function (e) {
+	$('.mistake').hide();
 	let firstName = $('.first').val();
-	if($('.srch-name').val() === '') {
+	let lastName = $('.last').val();
+	//console.log(firstName + ' ' + lastName);
+	if($('.first').val() === '' || $('.last').val() === '') {
+		e.preventDefault();
+		$('.description-nba').append('<p class="mistake">Oops! Looks like you missed a search field</p>');
 		$('.srch-name').css('border-color', 'tomato');
 	} else if ($('.srch-name').val() !== '' ) {
+		$('.mistake').hide();
 		$('.forma').hide();
 		$('.stats').show();
+		$('.forma').submit().serialize();
+		e.preventDefault();
 	} 
+	e.preventDefault();
 });
 
+//search button to allow user to perform another search
 $('.srch').click(function () {
 	$('.srch-name').css('border-color', '');
 	$('.forma').show();
 	$('.srch-name').val('');
 	$('.stats').hide();
+	
 });
