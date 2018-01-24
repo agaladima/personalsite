@@ -5,17 +5,7 @@ const scrapeIt = require('scrape-it');
 const NBA = require('nba');
 const multer = require('multer');
 const upload = multer();
-//const routes = require('./routes');
-
-const Email = require('email-templates');
-const email = new Email({
-	message: {
-		from: 'arum.galadima@gmail.com'
-	},
-	transport: {
-		jsonTransport: true
-	}
-});
+const routes = require('./routes');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -47,9 +37,12 @@ app.get('/', (req, res) => {
 	let first = req.query.firstname;
 	let last = req.query.lastname;
 	let fullname = first + ' ' + last;
+	
 	let player = NBA.findPlayer(fullname);
+	console.log(fullname);
 	playerData = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
 	//res.redirect('/');
+	
 	res.render('index');
 });
 

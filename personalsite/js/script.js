@@ -1,5 +1,4 @@
 
-
 //change active class of nav item when different items are clicked
 $('ul li').click(function() {
 	$('a').removeClass('active');
@@ -68,20 +67,21 @@ $('#contact-type').change(function() {
 	//if it's complete then post the form
 $('.stats').hide();
 $('.btn-srch').click(function (e) {
+	e.preventDefault();
 	$('.mistake').hide();
 	let firstName = $('.first').val();
 	let lastName = $('.last').val();
 	//console.log(firstName + ' ' + lastName);
-	if($('.first').val() === '' || $('.last').val() === '') {
+	if($('.first').val().trim() === '' || $('.last').val().trim() === '') {
 		e.preventDefault();
 		$('.description-nba').append('<p class="mistake">Oops! Looks like you missed a search field</p>');
 		$('.srch-name').css('border-color', 'tomato');
-	} else if ($('.srch-name').val() !== '' ) {
+	} else if ($('.first').val().trim() !== '' && $('.last').val().trim() !== '') {
 		$('.mistake').hide();
 		$('.forma').hide();
-		$('.stats').show();
-		$('.forma').submit().serialize();
+		$('.forma').submit();
 		e.preventDefault();
+		$('.stats').show();
 	} 
 	e.preventDefault();
 });
