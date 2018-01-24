@@ -1,12 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const scrapeIt = require('scrape-it');
 const NBA = require('nba');
-const multer = require('multer');
 const upload = multer();
 const routes = require('./routes');
-
+const url = 'http://www.nba.com/players';
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -16,11 +14,16 @@ app.set('view engine', 'pug');
 //use css
 app.use('/static', express.static('css'));
 
-//app.use('/', routes);
-// let player = NBA.findPlayer(fullname);
-// playerInfo = NBA.stats.playerInfo({ PlayerID: player.playerId });
+app.use('/', routes);
 
-
+//scrape nba page for info
+let first = 'lebron';
+let last = 'james';
+scrapeIt(url+'/'+first+'/'+last, {
+	playerInfo: {
+		name: '.full_table:nth-child(2)'
+	}
+});
 
 
 
@@ -30,21 +33,21 @@ app.use('/static', express.static('css'));
 
 
 //render the page
-app.get('/', (req, res) => {
-	//store player info in playerInfo object
-	let playerData = {};
-	//Grab player name that is searched
-	let first = req.query.firstname;
-	let last = req.query.lastname;
-	let fullname = first + ' ' + last;
+// app.get('/', (req, res) => {
+// 	//store player info in playerInfo object
+// 	let playerData = {};
+// 	//Grab player name that is searched
+// 	let first = req.query.firstname;
+// 	let last = req.query.lastname;
+// 	let fullname = first + ' ' + last;
 	
-	let player = NBA.findPlayer(fullname);
-	console.log(fullname);
-	playerData = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
-	//res.redirect('/');
+// 	let player = NBA.findPlayer(fullname);
 	
-	res.render('index');
-});
+// 	playerData = NBA.stats.playerInfo({ PlayerID: player.playerId }).then(console.log);
+// 	//res.redirect('/');
+// 	console.log(playerData);
+// 	res.send('index');
+// });
 
 
 //error pages
