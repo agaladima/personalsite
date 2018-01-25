@@ -1,0 +1,17 @@
+{
+    "playerInfo": {
+        "name": "Lonzo Ball",
+        "height": "",
+        "weight": "",
+        "number": "#2",
+        "position": "G",
+        "team": "Lakers"
+    },
+    "playerStats": {
+        "ppg": "",
+        "apg": "",
+        "rpg": "",
+        "mpg": "",
+        "bpg": ""
+    }
+}
