@@ -8,7 +8,7 @@ app.get('/scraper', function(req, res){
     const urlP = 'http://www.nba.com/players/';
     let first = 'lebron';
     let last = 'james';
-    let url = 'http://www.nba.com/players/lonzo/ball'; 
+    let url = 'http://www.nba.com/players/lebron/james'; 
     // The structure of our request call
     // The first parameter is our URL
     // The callback function takes 3 parameters, an error, response status code and the html
@@ -18,7 +18,7 @@ app.get('/scraper', function(req, res){
         // First we'll check to make sure no errors occurred when making the request
         let json = { playerInfo: {
         								name: '',
-        								height: '',
+        								pheight: '',
 				                weight: '',             
 				                number: '',
 				                position: '',
@@ -58,6 +58,30 @@ app.get('/scraper', function(req, res){
           	position = data.children('.nba-player-header__position').text().trim();
           	json.playerInfo.position = position;
         	});
+          $('.nba-player-vitals__top-left').filter(function() {
+            let data = $(this);
+            height = data.children('.nba-player-vitals__top-info-imperial').first().text().trim();
+            json.playerInfo.pheight = height;
+          });
+          $('.nba-player-vitals__top-right').filter(function() {
+            let data = $(this);
+            weight = data.children('.nba-player-vitals__top-info-imperial').first().text().trim();
+            json.playerInfo.weight = weight;
+          });
+          //get player stats
+          $('.nba-player-season-career-stats').children().children().last().children().filter(function() {
+            let data = $(this);
+            ppg = data.children('td:nth-child(6)').text().trim();
+            json.playerStats.ppg = ppg;
+            apg = data.children('td:nth-child(8)').text().trim();
+            json.playerStats.apg = apg;
+            rpg = data.children('td:nth-child(7)').text().trim();
+            json.playerStats.rpg = rpg;
+            mpg = data.children('td:nth-child(2)').text().trim();
+            json.playerStats.mpg = mpg;
+            bpg = data.children('td:nth-child(9)').text().trim();
+            json.playerStats.bpg = bpg;
+          });
         }
         fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
 	        console.log('File successfully written! - Check your project directory for the output.json file');
