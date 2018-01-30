@@ -5,6 +5,10 @@ router.get('/', (req, res) => {
 	res.render('index');
 });
 
+router.get('/scraped', (req, res) => {
+	res.render('index');
+});
+
 router.use(function(req, res) {
 	res.status(400);
 	res.render('404.pug', {title: '404: File Not Found'});

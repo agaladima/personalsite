@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const fs = require('fs');
 const NBA = require('nba');
 const cheerio = require('cheerio');
 const routes = require('./routes');
-const url = 'http://www.nba.com/players';
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -17,8 +17,7 @@ app.use('/static', express.static('css'));
 
 app.use('/', routes);
 
-
-app.get('/', function(req, res){
+app.get('/scraped', function(req, res){
     const urlP = 'http://www.nba.com/players/';
     let first = 'lebron';
     let last = 'james';
@@ -97,13 +96,22 @@ app.get('/', function(req, res){
             json.playerStats.bpg = bpg;
           });
         }
-        fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-	        console.log('File successfully written! - Check your project directory for the output.json file');
+     		fs.writeFile('output.json', JSON.stringify(json), function(err){
+        	console.log('File successfully written! - Check your project directory for the output.json file');
 	    	});
-	    	res.send('Check the console');
+	    	//res.render('index'); 	
     });
 });
 
+// app.use(function(req, res) {
+// 	res.status(400);
+// 	res.render('404.pug', {title: '404: File Not Found'});
+// });
+
+// app.use(function(error, req, res, next) {
+// 	res.status(500);
+// 	res.render('500.pug', {title:'500: Internal Server Error', error: error});
+// });
 
 app.listen(3000, () => {
 	console.log('The app is running on local host:3000.');
