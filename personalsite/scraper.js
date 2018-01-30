@@ -4,7 +4,13 @@ const request = require('request');
 const cheerio = require('cheerio');
 const app = express();
 
-app.get('/scraper', function(req, res){
+//use pug
+app.set('view engine', 'pug');
+
+//use css
+app.use('/static', express.static('css'));
+
+app.get('/', function(req, res){
     const urlP = 'http://www.nba.com/players/';
     let first = 'lebron';
     let last = 'james';
@@ -86,60 +92,10 @@ app.get('/scraper', function(req, res){
         fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
 	        console.log('File successfully written! - Check your project directory for the output.json file');
 	    	});
-	    	res.send('Check the console');
+	    	res.render('index');
     });
 });
 
 app.listen('8081')
 console.log('Magic happens on port 8081');
 exports = module.exports = app;
-
-
-
-
-
-            // let json = { playerInfo: {
-            //     name: '',
-            //     
-            // },
-            // playerStats: {
-            //     
-            // }};
-
-            // //get elements
-            // fname = $('.nba-player-header__first-name').text();
-            // lname = $('.nba-player-header__last-name').text();
-            // name = fname + ' ' + lname;
-            // json.playerInfo.name = name;
-
-            // let height1 = $('.nba-player-vitals__top-info-imperial').children().first().text();
-            // let height2 = $('.nba-player-vitals__top-info-imperial:nth-child(2)').text();;
-            // height = height1 + "ft" + height2 + "in";
-            // json.playerInfo.height = height;
-
-            // weight = $('.nba-player-vitals__top-info-imperial:nth-child(3)').text();
-            // json.playerInfo.weight = weight;
-
-            // number = $('.nba-player-header__jersey-number').text();
-            // json.playerInfo.number = number;
-
-            // position = $('.nba-player-header__position').text();
-            // json.playerInfo.position = position;
-
-            // team = $('.nba-detail-header__team-logo').text();
-            // json.playerInfo.team = team;
-
-            // ppg = $('.nba-player-season-career-stats table tbody:nth-child(6)').text();
-            // json.playerStats.ppg = ppg;
-
-            // apg = $('.nba-player-season-career-stats table tbody:nth-child(8)').text();
-            // json.playerStats.apg = apg;
-
-            // rpg = $('.nba-player-season-career-stats table tbody:nth-child(7)').text();
-            // json.playerStats.rpg = rpg;
-
-            // mpg = $('.nba-player-season-career-stats table tbody:nth-child(2)').text();
-            // json.playerStats.mpg = mpg;
-
-            // bpg = $('.nba-player-season-career-stats table tbody:nth-child(9)').text();
-            // json.playerStats.bpg = bpg;
