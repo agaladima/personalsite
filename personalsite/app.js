@@ -17,7 +17,7 @@ app.use('/static', express.static('css'));
 
 app.use('/', routes);
 
-app.get('/scraped', function(req, res){
+app.get('/', function(req, res){
     const urlP = 'http://www.nba.com/players/';
     let first = 'lebron';
     let last = 'james';

@@ -3,67 +3,68 @@ const fs = require('fs');
 const request = require('request');
 const cheerio = require('cheerio');
 const app = express();
-
+const routes = require('./routes');
 //use pug
 app.set('view engine', 'pug');
+
+//app.use('/', routes);
 
 //use css
 app.use('/static', express.static('css'));
 
 app.get('/', function(req, res){
-    const urlP = 'http://www.nba.com/players/';
-    let first = 'lebron';
-    let last = 'james';
-    let url = 'http://www.nba.com/players/lebron/james'; 
+
     // The structure of our request call
     // The first parameter is our URL
     // The callback function takes 3 parameters, an error, response status code and the html
 
-    request(url, function(error, response, html){
+    
+});
+
+let url = 'http://www.nba.com/players/lebron/james'; 
+
+let json = { playerInfo: {
+                        name: '',
+                        pheight: '',
+                        weight: '',             
+                        number: '',
+                        position: '',
+                        team: '',
+                    },
+                    playerStats: {
+                      ppg: '',
+                      apg: '',
+                      rpg: '',
+                      mpg: '',
+                      bpg: ''                   
+                    }
+                  };
+
+request(url, function(error, response, html){
 
         // First we'll check to make sure no errors occurred when making the request
-        let json = { playerInfo: {
-        								name: '',
-        								pheight: '',
-				                weight: '',             
-				                number: '',
-				                position: '',
-				                team: '',
-        						},
-        						playerStats: {
-        							ppg: '',
-			                apg: '',
-			                rpg: '',
-			                mpg: '',
-			                bpg: ''										
-        						}
-        					};
+        let fname, lname, height, weight, number, position, team, ppg, apg, rpg, mpg, bpg, $;
         if(!error){
-          // Next, we'll utilize the cheerio library on the returned html which will essentially give us jQuery functionality
-          
-          let $ = cheerio.load(html);
-
-          // Finally, we'll define the variables we're going to capture
-
-          let fname, lname, height, weight, number, position, team, ppg, apg, rpg, mpg, bpg;
-          
+          $ = cheerio.load(html);
+       
           //get player name
           $('.nba-player-header__details-bottom').filter(function(){
-      			let data = $(this);
-          	fname = data.children().first().text().trim();
-          	lname = data.children().last().text().trim();
-          	let fullname = fname + ' ' + lname;
-          	json.playerInfo.name = fullname;
-        	});
+            let data = $(this);
+            fname = data.children().first().text().trim();
+            lname = data.children().last().text().trim();
+            let fullname = fname + ' ' + lname;
+            json.playerInfo.name = fullname;
+            playerInformation = fullname;
+          });
           $('.nba-player-header__details-top').filter(function(){
-      			let data = $(this);
-          	team = data.children().first().text().trim();
-          	json.playerInfo.team = team;
-          	number = data.children('.nba-player-header__jersey-number').text().trim();
-          	json.playerInfo.number = number;
-          	position = data.children('.nba-player-header__position').text().trim();
-          	json.playerInfo.position = position;
-        	});
+            let data = $(this);
+            team = data.children().first().text().trim();
+            json.playerInfo.team = team;
+            number = data.children('.nba-player-header__jersey-number').text().trim();
+            json.playerInfo.number = number;
+            position = data.children('.nba-player-header__position').text().trim();
+            json.playerInfo.position = position;
+          });
           $('.nba-player-vitals__top-left').filter(function() {
             let data = $(this);
             height = data.children('.nba-player-vitals__top-info-imperial').first().text().trim();
@@ -89,12 +90,13 @@ app.get('/', function(req, res){
             json.playerStats.bpg = bpg;
           });
         }
-        fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-	        console.log('File successfully written! - Check your project directory for the output.json file');
-	    	});
-	    	res.render('index');
+        // fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+        //   console.log('File successfully written! - Check your project directory for the output.json file');
+        // });
+        // res.send('Check root folder');
+        console.log(json);
     });
-});
+//console.log(json);
 
 app.listen('8081')
 console.log('Magic happens on port 8081');
