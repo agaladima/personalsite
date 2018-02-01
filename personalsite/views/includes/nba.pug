@@ -1,14 +1,14 @@
 #nba.both-forms
   .nba-box
     h2.lower-bold NBA Search
-    p.description-nba.forma Pull any current NBA player's stats when you search for their name below.
+    p.description-nba.forma Pull up LeBron James' current stats from NBA.com using the search button below
     br
-    form.forma.form(method='post')
+    form.forma.form
       span
         input.srch-name.first(type='text', name='firstname', placeholder='First Name')
         input.srch-name.last(type='text', name='lastname', placeholder='Last Name')
         br
-        button.btn-srch(type='submit') Search
+        button.btn-srch Search
     .stats
       table.player-info
         tr

@@ -1,4 +1,6 @@
-
+$(document).ready(function(e) {
+	e.preventDefault();
+});
 //change active class of nav item when different items are clicked
 $('ul li').click(function() {
 	$('a').removeClass('active');
@@ -68,24 +70,29 @@ $('#contact-type').change(function() {
 $('.stats').hide();
 $('.btn-srch').click(function (e) {
 	e.preventDefault();
-	$('.mistake').hide();
-	let firstName = $('.first').val();
-	let lastName = $('.last').val();
-	//console.log(firstName + ' ' + lastName);
-	if($('.first').val().trim() === '' || $('.last').val().trim() === '') {
-		e.preventDefault();
-		$('.description-nba').append('<p class="mistake">Oops! Looks like you missed a search field</p>');
-		$('.srch-name').css('border-color', 'tomato');
-	} else if ($('.first').val().trim() !== '' && $('.last').val().trim() !== '') {
-		$('.mistake').hide();
-		$('.forma').hide();
-		$('.forma').submit();
-		e.preventDefault();
-		$('.stats').show();
-	} 
-	e.preventDefault();
+	$('.forma').hide();
+	$('.stats').show();
+	// e.preventDefault();
+	// $('.mistake').hide();
+	// let firstName = $('.first').val();
+	// let lastName = $('.last').val();
+	// //console.log(firstName + ' ' + lastName);
+	// if($('.first').val().trim() === '' || $('.last').val().trim() === '') {
+	// 	e.preventDefault();
+	// 	$('.description-nba').append('<p class="mistake">Oops! Looks like you missed a search field</p>');
+	// 	$('.srch-name').css('border-color', 'tomato');
+	// } else if ($('.first').val().trim() !== '' && $('.last').val().trim() !== '') {
+	// 	$('.mistake').hide();
+	// 	$('.forma').hide();
+	// 	//$('.forma').submit();
+	// 	e.preventDefault();
+	// 	$('.stats').show();
+	// } 
+	// e.preventDefault();
 });
 
+$('.first').hide();
+$('.last').hide();
 //search button to allow user to perform another search
 $('.srch').click(function () {
 	$('.srch-name').css('border-color', '');
