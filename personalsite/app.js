@@ -120,6 +120,3 @@ request(url, function(error, response, html){
 app.listen(3000, () => {
 	console.log('The app is running on local host:3000.');
 });
-
-exports = module.exports = app;
-
