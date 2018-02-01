@@ -79,7 +79,7 @@ $('.btn-srch').click(function (e) {
 	} else if ($('.first').val().trim() !== '' && $('.last').val().trim() !== '') {
 		$('.mistake').hide();
 		$('.forma').hide();
-		//$('.forma').submit();
+		$('.forma').submit();
 		e.preventDefault();
 		$('.stats').show();
 	} 

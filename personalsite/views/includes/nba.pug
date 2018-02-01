@@ -3,17 +3,16 @@
     h2.lower-bold NBA Search
     p.description-nba.forma Pull any current NBA player's stats when you search for their name below.
     br
-    form.forma.form(method='get')
+    form.forma.form(method='post')
       span
         input.srch-name.first(type='text', name='firstname', placeholder='First Name')
         input.srch-name.last(type='text', name='lastname', placeholder='Last Name')
         br
-        button.btn-srch Search
+        button.btn-srch(type='submit') Search
     .stats
       table.player-info
         tr
           th Name
-          th Birthdate
           th Height
           th Weight
           th Jersey
@@ -21,13 +20,25 @@
           th Team
         tr
           td #{pName}
+          td #{height}
+          td #{weight}
+          td #{numb}
+          td #{pos}
+          td #{team}
+      br
       table.player-stats
         tr
           th Points
           th Assists
           th Rebounds
-          th PIE
-        td
+          th Minutes
+          th Blocks
+        tr
+          td #{points}
+          td #{assists}
+          td #{rebounds}
+          td #{mins}
+          td #{blocks}
       button.srch Search Again
   .nbax
     h2.lower-bold NBA Search

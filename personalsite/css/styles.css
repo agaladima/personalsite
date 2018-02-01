@@ -271,6 +271,11 @@ label {
   box-shadow: 5px 10px #E0EEF1;
 }
 
+tr {
+  background-color: #24292e;
+  color: white;
+}
+
 .form-body input {
   width: 100%;
   border-radius: 5px;

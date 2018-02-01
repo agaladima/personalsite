@@ -4,24 +4,32 @@ const request = require('request');
 const cheerio = require('cheerio');
 const app = express();
 const routes = require('./routes');
+const bodyParser = require('body-parser');
+const global = require('global');
+
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
 //use pug
 app.set('view engine', 'pug');
-
-//app.use('/', routes);
 
 //use css
 app.use('/static', express.static('css'));
 
-app.get('/', function(req, res){
-
-    // The structure of our request call
-    // The first parameter is our URL
-    // The callback function takes 3 parameters, an error, response status code and the html
-
-    
+// let firstname = [];
+// let lastname = [];
+let url='';
+app.post('/', function(req, res) {
+  global.firstname = req.body.firstname;
+  global.lastname = req.body.lastname;
+  //console.log(firstname+lastname + 'here you go');
+  let purl = 'http://www.nba.com/players/';
+  global.url = purl + firstname + '/' + lastname;
+  console.log(url);
+  
 });
 
-let url = 'http://www.nba.com/players/lebron/james'; 
+
 
 let json = { playerInfo: {
                         name: '',
@@ -93,8 +101,22 @@ request(url, function(error, response, html){
         // fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
         //   console.log('File successfully written! - Check your project directory for the output.json file');
         // });
-        // res.send('Check root folder');
-        console.log(json);
+        
+        app.get('/', function(req, res){
+          res.render('index', {
+            pName: json.playerInfo.name,
+            height: json.playerInfo.pheight,
+            weight: json.playerInfo.weight,
+            numb: json.playerInfo.number,
+            pos: json.playerInfo.position,
+            team: json.playerInfo.team,
+            points: json.playerStats.ppg,
+            assists: json.playerStats.apg,
+            rebounds: json.playerStats.rpg,
+            mins: json.playerStats.mpg,
+            blocks: json.playerStats.bpg
+          });
+        });
     });
 //console.log(json);
 
