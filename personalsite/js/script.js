@@ -108,3 +108,9 @@ $('.form-btn').click(function() {
 	$('.email-confirmation').show();
 	//show a message that says your information has been received
 });
+
+//get year
+let d = new Date();
+let currentYr = d.getFullYear();
+//keep footer up-to-date
+$('footer').append('<p class="footer center">Copyright &copy; '+ currentYr + ' Arum Galadima</p>');

@@ -295,9 +295,20 @@ tr {
   font-weight: bold;
 }
 
+.email-confirmation {
+  color: #32DC3F;
+}
 
 
+footer {
+  background-color: #24292e;
+  color: #D5D5D5;
+}
 
+.footer {
+  font-size: .75em;
+  padding: 3em;
+}
 
 .blinking-cursor {
   font-weight: 100;
