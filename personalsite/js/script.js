@@ -99,5 +99,12 @@ $('.srch').click(function () {
 	$('.forma').show();
 	$('.srch-name').val('');
 	$('.stats').hide();
-	
+});
+
+$('.email-confirmation').hide();
+$('.form-btn').click(function() {
+	//hide the form 
+	$('.contact-form').hide();
+	$('.email-confirmation').show();
+	//show a message that says your information has been received
 });

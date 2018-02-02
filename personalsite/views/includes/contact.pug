@@ -1,8 +1,10 @@
-#contact-form.contact-form
+h2.lower-bold.email-confirmation Contact Me
+p.email-confirmation.center Your message has been sent . . . Thanks!
+form#contact-form.contact-form(action='mailto:arum.galadima@gmail.com', method='post', enctype='text/plain')
   h2.lower-bold Contact Me
-  p.center
+  p.center.contact-description
     | Please use the form below to let me know why you're contacting me. I promise I'll respond
-  form(name='contact-reason', action='#contact-form', method='post')
+  form.contact-description(name='contact-reason', action='#contact-form', method='post')
     .center
       ul.input-border
         li.dropdown
