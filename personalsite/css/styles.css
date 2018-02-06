@@ -62,6 +62,10 @@ a:hover {
   font-size: 5rem;
 }
 
+.dev-title {
+  position: static;
+}
+
 .main-sub-content {
   padding-top: 15em;
   padding-left: 2em;
@@ -380,11 +384,11 @@ footer {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
-
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767px) {
+  .nav-head a {
+    text-decoration: none;
+    color: tomato;
+    position: static;
+  }
   .resume {
     font-size: .8em;
   }
@@ -431,110 +435,318 @@ footer {
     margin-bottom: 10px;
     border-radius: 5px;
   }
+  .form-body {
+    width: 60%;
+  }
   body {
-  background: #020304;
-}
-body h1 {
-  position: fixed;
-  top: 40px;
-  left: 40px;
-  z-index: 6;
-  font-size: 20px;
-  font-weight: 900;
-  font-family: sans-serif;
-  text-transform: uppercase;
-}
-body h1 > span {
-  text-transform: none;
-  opacity: 0.5;
-  font-weight: 300;
-  font-size: 12px;
-}
-body input + label {
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  height: 20px;
-  width: 15px;
-  z-index: 5;
-}
-body input + label span {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  top: 50%;
-  margin-top: -1px;
-  left: 0;
-  display: block;
-  background: #020304;
-  transition: 0.5s;
-}
-body input + label span:first-child {
-  top: 3px;
-}
-body input + label span:last-child {
-  top: 16px;
-}
-body label:hover {
-  cursor: pointer;
-}
-body input:checked + label span {
-  opacity: 0;
-  top: 50%;
-}
-body input:checked + label span:first-child {
-  opacity: 1;
-  transform: rotate(405deg);
-}
-body input:checked + label span:last-child {
-  opacity: 1;
-  transform: rotate(-405deg);
-}
-body input ~ nav {
   background: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 3;
-  transition: 0.5s;
-  transition-delay: 0.5s;
-  overflow: hidden;
+  }
+  body h1 {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 6;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+  body h1 > span {
+    text-transform: none;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  body input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+  }
+  body input + label span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: #020304;
+    transition: 0.5s;
+  }
+  body input + label span:first-child {
+    top: 3px;
+  }
+  body input + label span:last-child {
+    top: 16px;
+  }
+  body label:hover {
+    cursor: pointer;
+  }
+  body input:checked + label span {
+    opacity: 0;
+    top: 50%;
+  }
+  body input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+  }
+  body input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+  }
+  body input ~ nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+  }
+  body input ~ nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+  }
+  body input ~ nav > ul > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  body input ~ nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #020304;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: block;
+    padding: 30px;
+  }
+  body input:checked ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  body input:checked ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  li {
+    list-style-type: none;
+  }
+  .ham-nav {
+   
+    text-align: center;
+  }
+  .sec-nav {
+    display: none;
+  }
+  .hamburger-menu nav {
+    width: 100%;
+  }
+  .ham-nav a {
+    color: black;
+  }
+  .ham-nav li {
+    width: 100%;
+  }
+  .ham-nav li:hover {
+    background-color: #e6e6e6;
+  }
 }
-body input ~ nav > ul {
-  text-align: center;
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  right: 20%;
-}
-body input ~ nav > ul > li {
-  opacity: 0;
-  transition: 0.5s;
-  transition-delay: 0s;
-}
-body input ~ nav > ul > li > a {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #020304;
-  font-weight: 700;
-  font-family: sans-serif;
-  display: block;
-  padding: 30px;
-}
-body input:checked ~ nav {
-  height: 100%;
-  transition-delay: 0s;
-}
-body input:checked ~ nav > ul > li {
-  opacity: 1;
-  transition-delay: 0.5s;
-}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .nav-head a {
+    text-decoration: none;
+    color: tomato;
+    position: static;
+  }
+  .resume {
+    font-size: .8em;
+  }
+  #sub-cont-title {
+    font-size: 1.6em;
+  }
+  .cont img {
+    height: 6em;
+    background-repeat: no-repeat;
+  }
+  .exp-sub-head {
+    font-size: 1.2em;
+  }
+  .company {
+    font-size: 1.3em;
+  }
+  .dates-worked {
+    font-size: .8em;
+  }
+  .role {
+    font-size: 1em;
+  }
+  .exp-sub {
+    font-size: .9em;
+  }
+  .main-sub-content > h1 {
+    font-size: 4em;
+  }
+  h6 > a {
+    font-size: .9em;
+  }
+  .cert-date {
+    font-size: .7em;
+  }
+  .description-nba {
+    font-size: 1em;
+  }
+  .stats {
+    font-size: .6em;
+  }
+  .srch {
+    background-color: tomato;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .form-body {
+    width: 60%;
+  }
+  body {
+  background: white;
+  }
+  body h1 {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 6;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+  body h1 > span {
+    text-transform: none;
+    opacity: 0.5;
+    font-weight: 300;
+    font-size: 12px;
+  }
+  body input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+  }
+  body input + label span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: #020304;
+    transition: 0.5s;
+  }
+  body input + label span:first-child {
+    top: 3px;
+  }
+  body input + label span:last-child {
+    top: 16px;
+  }
+  body label:hover {
+    cursor: pointer;
+  }
+  body input:checked + label span {
+    opacity: 0;
+    top: 50%;
+  }
+  body input:checked + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+  }
+  body input:checked + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+  }
+  body input ~ nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+  }
+  body input ~ nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    right: 20%;
+  }
+  body input ~ nav > ul > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+  }
+  body input ~ nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #020304;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: block;
+    padding: 30px;
+  }
+  body input:checked ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+  }
+  body input:checked ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+  }
+  li {
+    list-style-type: none;
+  }
+  .ham-nav {
+   
+    text-align: center;
+  }
+  .sec-nav {
+    display: none;
+  }
+  .hamburger-menu nav {
+    width: 100%;
+  }
+  .ham-nav a {
+    color: black;
+  }
+  .ham-nav li {
+    width: 100%;
+  }
+  .ham-nav li:hover {
+    background-color: #e6e6e6;
+  }
 }
 
 /*  Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991px) {
+  .hamburger-menu {
+    display: none;
+  }
   .resume {
     font-size: .8em;
   }
@@ -585,6 +797,9 @@ body input:checked ~ nav > ul > li {
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199px) {
+  .hamburger-menu {
+    display: none;
+  }
   #sub-cont-title {
     font-size: 2.1em;
   }
@@ -604,5 +819,7 @@ body input:checked ~ nav > ul > li {
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-
+  .hamburger-menu {
+    display: none;
+  }
 }

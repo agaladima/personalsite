@@ -1,6 +1,3 @@
-$(document).ready(function(e) {
-	e.preventDefault();
-});
 //change active class of nav item when different items are clicked
 $('ul li').click(function() {
 	$('a').removeClass('active');
@@ -114,3 +111,14 @@ let d = new Date();
 let currentYr = d.getFullYear();
 //keep footer up-to-date
 $('footer').append('<p class="footer center">Copyright &copy; '+ currentYr + ' Arum Galadima</p>');
+
+// $('label[for="burger"]').click(function {
+// 	if($('.dev-title').is(':visible')) {
+// 		$(this).is(':hidden');
+// 	} else {
+// 		$(this).is(':visible');
+// 	}
+// });
+$('.ham-nav li').click(function () {
+	$('#burger').prop('checked', false);
+});
