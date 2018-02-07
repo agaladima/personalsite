@@ -418,6 +418,12 @@ footer {
   .exp-sub-head {
     font-size: 1.1em;
   }
+  .about-me {
+    font-size: .7em;
+  }
+  .about-me-sub {
+    font-size: .75em;
+  }
   .company {
     font-size: 1em;
   }
