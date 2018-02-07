@@ -105,6 +105,7 @@ a:hover {
 #sub-cont-title {
   color: tomato;
   font-size: 2.7em;
+  text-align: center;
 }
 
 .resume {
@@ -384,6 +385,21 @@ footer {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
+  .sub-content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .experience {
+    position: relative;
+  }
+  .nba-box, .nbax {
+    position: relative;
+    width: 100%;
+  }
+  .nba-box {
+    margin-bottom: 1em;
+  }
   .nav-head a {
     text-decoration: none;
     color: tomato;
@@ -400,28 +416,34 @@ footer {
     background-repeat: no-repeat;
   }
   .exp-sub-head {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .company {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   .dates-worked {
     font-size: .8em;
   }
   .role {
-    font-size: 1em;
+    font-size: .9em;
   }
   .exp-sub {
-    font-size: .9em;
+    font-size: .7em;
   }
   .main-sub-content > h1 {
-    font-size: 4em;
+    font-size: 2em;
+  }
+  .main-sub-content > p {
+    font-size: .7em;
+  }
+  .main-sub-content > h5 {
+    font-size: .78em;
   }
   h6 > a {
-    font-size: .9em;
+    font-size: .7em;
   }
   .cert-date {
-    font-size: .7em;
+    font-size: .5em;
   }
   .description-nba {
     font-size: 1em;
@@ -564,6 +586,21 @@ footer {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767px) {
+  .sub-content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .experience {
+    position: relative;
+  }
+  .nba-box, .nbax {
+    position: relative;
+    width: 100%;
+  }
+  .nba-box {
+    margin-bottom: 1em;
+  }
   .nav-head a {
     text-decoration: none;
     color: tomato;
@@ -580,10 +617,10 @@ footer {
     background-repeat: no-repeat;
   }
   .exp-sub-head {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .company {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   .dates-worked {
     font-size: .8em;
@@ -592,16 +629,16 @@ footer {
     font-size: 1em;
   }
   .exp-sub {
-    font-size: .9em;
+    font-size: .7em;
   }
   .main-sub-content > h1 {
     font-size: 4em;
   }
   h6 > a {
-    font-size: .9em;
+    font-size: .7em;
   }
   .cert-date {
-    font-size: .7em;
+    font-size: .5em;
   }
   .description-nba {
     font-size: 1em;
