@@ -1,34 +1,31 @@
+/* app.js is a single page application 
+and is served using express and uses the 
+cheerio npm to scrape and render data from
+nba.com. The scraped data is rendered at
+nba.pug. */
+
 const express = require('express');
+// fs is not needed so remove
 const fs = require('fs');
 const request = require('request');
 const cheerio = require('cheerio');
 const app = express();
+// also get rid of this. it's not used
 const routes = require('./routes');
 const bodyParser = require('body-parser');
 const global = require('global');
 
-
+// to parse the body
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-//use pug
-app.set('view engine', 'pug');
 
-//use css
+// use pug and css to display on the page
+app.set('view engine', 'pug');
 app.use('/static', express.static('css'));
 
-//app.use('/', routes);
-
 let url = 'http://www.nba.com/players/lebron/james';
-// app.post('/', function(req, res) {
-//   let firstname = req.body.firstname;
-//   let lastname = req.body.lastname;
-//   //console.log(firstname+lastname + 'here you go');
-//   let purl = 'http://www.nba.com/players/';
-//   url = purl + firstname + '/' + lastname;
-//   app.set('url', {domain: url});
-// });
 
-//object to store player data
+// object to store player data
 let json = { playerInfo: {
                         name: '',
                         pheight: '',
@@ -48,12 +45,12 @@ let json = { playerInfo: {
 
 request(url, function(error, response, html){
 
-  // First we'll check to make sure no errors occurred when making the request
+  // declare variables that will be passed into the object 'json'
   let fname, lname, height, weight, number, position, team, ppg, apg, rpg, mpg, bpg, $;
   if(!error){
     $ = cheerio.load(html);
  
-    //get player name
+    //get player name and other details
     $('.nba-player-header__details-bottom').filter(function(){
       let data = $(this);
       fname = data.children().first().text().trim();
@@ -81,7 +78,7 @@ request(url, function(error, response, html){
       weight = data.children('.nba-player-vitals__top-info-imperial').first().text().trim();
       json.playerInfo.weight = weight;
     });
-    //get player stats
+    // get player stats
     $('.nba-player-season-career-stats').children().children().last().children().filter(function() {
       let data = $(this);
       ppg = data.children('td:nth-child(6)').text().trim();
@@ -96,10 +93,7 @@ request(url, function(error, response, html){
       json.playerStats.bpg = bpg;
     });
   }
-  // fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-  //   console.log('File successfully written! - Check your project directory for the output.json file');
-  // });
-  //console.log(json);
+  // render player stats on the page when search button is toggled
   app.get('/', function(req, res){
     res.render('index', {
       pName: json.playerInfo.name,
@@ -116,6 +110,8 @@ request(url, function(error, response, html){
     });
   });
 });
+
+// add error pages
 
 app.listen(3000, () => {
 	console.log('The app is running on local host:3000.');

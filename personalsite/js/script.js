@@ -1,26 +1,25 @@
-//change active class of nav item when different items are clicked
+// change active class of nav item when different items are clicked
 $('ul li').click(function() {
 	$('a').removeClass('active');
 	$(this).children().addClass('active');
 });
 
 $('.hiding').hide();
-//when you hover over certain items different text should be displayed
+// when you hover over certain items, different text is displayed
 $('.dropdown-item').hover(function() {
 	$(this).next('.dropdown-item').toggle();
-	// $(this).show();
 }, function() {
 	$(this).next('.dropdown-item').toggle();
 });
 
-//change download icon color on hover
+// change download icon color on hover
 $('.thumb-resume').hover(function() {
 	$(this).css('-webkit-filter', 'brightness(200%)');
 }, function() {
 	$(this).css('-webkit-filter', '');
 });
 
-//on hovering over each resume item, invert colors of background and title
+// on hovering over each resume item, invert colors of background and title
 $('.box').hover(function() {
 	$(this).css('background-color', 'tomato');
 	$(this).children().css('color', 'white');
@@ -32,7 +31,7 @@ $('.box').hover(function() {
 	$('.role').css('color', 'black');
 });
 
-//change color of form button when hovered over
+// change color of form button when it's hovered over
 $('.form-btn').hover(function() {
 	$(this).css('background-color', '#CAE6EC');
 }, function() {
@@ -40,7 +39,8 @@ $('.form-btn').hover(function() {
 });
 
 $('.form-body').hide();
-//check if an email option is selected
+/* check which email option is selected and
+applying a custom subject to the form */
 $('#contact-type').change(function() {
 	if($(this).val() === 'General') {
 		$('#subject').val('Just Connecting');
@@ -62,35 +62,17 @@ $('#contact-type').change(function() {
 	}
 });
 
-//checking to see whether the search form is complete or not
-	//if it's complete then post the form
+// the button hides the original state and shows player information
 $('.stats').hide();
 $('.btn-srch').click(function (e) {
 	e.preventDefault();
 	$('.forma').hide();
 	$('.stats').show();
-	// e.preventDefault();
-	// $('.mistake').hide();
-	// let firstName = $('.first').val();
-	// let lastName = $('.last').val();
-	// //console.log(firstName + ' ' + lastName);
-	// if($('.first').val().trim() === '' || $('.last').val().trim() === '') {
-	// 	e.preventDefault();
-	// 	$('.description-nba').append('<p class="mistake">Oops! Looks like you missed a search field</p>');
-	// 	$('.srch-name').css('border-color', 'tomato');
-	// } else if ($('.first').val().trim() !== '' && $('.last').val().trim() !== '') {
-	// 	$('.mistake').hide();
-	// 	$('.forma').hide();
-	// 	//$('.forma').submit();
-	// 	e.preventDefault();
-	// 	$('.stats').show();
-	// } 
-	// e.preventDefault();
 });
 
 $('.first').hide();
 $('.last').hide();
-//search button to allow user to perform another search
+// this form hides player info state and shows original state
 $('.srch').click(function () {
 	$('.srch-name').css('border-color', '');
 	$('.forma').show();
@@ -100,25 +82,19 @@ $('.srch').click(function () {
 
 $('.email-confirmation').hide();
 $('.form-btn').click(function() {
-	//hide the form 
+	/* hide the form and show a message that says
+	your information has been received */
 	$('.contact-form').hide();
 	$('.email-confirmation').show();
-	//show a message that says your information has been received
 });
 
-//get year
+// get year
 let d = new Date();
 let currentYr = d.getFullYear();
-//keep footer up-to-date
+// keep footer up-to-date using year
 $('footer').append('<p class="footer center">Copyright &copy; '+ currentYr + ' Arum Galadima</p>');
 
-// $('label[for="burger"]').click(function {
-// 	if($('.dev-title').is(':visible')) {
-// 		$(this).is(':hidden');
-// 	} else {
-// 		$(this).is(':visible');
-// 	}
-// });
+// when a burger menu item is clicked, this closes the burger menue
 $('.ham-nav li').click(function () {
 	$('#burger').prop('checked', false);
 });
