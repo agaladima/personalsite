@@ -112,7 +112,6 @@ request(url, function(error, response, html){
 });
 
 // add error pages
+var port = process.env.port || 3000;
 
-app.listen(3000, () => {
-	console.log('The app is running on local host:3000.');
-});
+app.listen(port);
