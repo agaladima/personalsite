@@ -4,7 +4,7 @@
   "description": "Personal site to showcase my work.",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "author": "Arum Galadima",
   "license": "ISC",
@@ -12,16 +12,21 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "global": "^4.3.2",
-    "nba": "^4.1.0",
+    "gmail-send": "^1.2.14",
+    "nodemon": "^1.18.4",
+    "path": "^0.12.7",
     "pug": "^2.0.0-rc.4",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "serve-favicon": "^2.5.0"
   },
   "engines": {
     "node": "8.9.4",
     "npm": "5.6.0"
   },
-  "devDependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "nodemon": "^1.14.7"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/arumjugu.git"
+  },
+  "devDependencies": {},
+  "keywords": []
 }

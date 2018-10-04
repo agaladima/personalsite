@@ -1,0 +1,31 @@
+doctype html
+html(lang='en', dir='ltr')
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='static/css/styles.css')
+    link(rel='stylesheet', href='static/css/form.css')
+    link(href='https://fonts.googleapis.com/css?family=Abel', rel='stylesheet')
+    title
+  body
+  nav
+    span.just-slash |
+    a.navigation(href='/') Go Home
+    span.just-slash |
+    #wrapper
+      form.form(action='' method='post')
+        p.field.required.half
+          label.label.required(for='name') Name
+          input#name.text-input(name='name', required='', type='text')
+        p.field.required.half
+          label.label(for='email') E-mail
+          input#email.text-input(name='email', required='', type='email')
+        p.field
+          label.label(for='message') Message
+          textarea#message.textarea(cols='50', name='message', required='', rows='4')
+        p.field
+          input.button(type='submit', value='Send message')
+    script(src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js', integrity='sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4', crossorigin='anonymous')
+    script(type='text/javascript', src='static/js/formscript.js')
+    script(type='text/javascript', src='static/js/script.js')

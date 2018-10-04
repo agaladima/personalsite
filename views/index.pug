@@ -2,11 +2,14 @@ extends layout
 block content
 	.main-section
 		include includes/header.pug
-		include includes/topbody.pug
-		include includes/experience.pug
-		include includes/nba.pug
-		include includes/contact.pug
+		include includes/intro.pug
+		include includes/technology.pug
+		include includes/education.pug
+		hr
+		include includes/projects.pug
+		include includes/social.pug
 	include includes/footer.pug
 	footer
 	script
-		include ../js/script.js
+		include ../public/js/script.js
+		include ../public/js/formscript.js
